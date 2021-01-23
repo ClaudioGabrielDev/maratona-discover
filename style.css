@@ -1,0 +1,73 @@
+:root{
+    --blue-dark: #363f5f;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: min(90vw, 800px);
+    margin: auto;
+}
+/* Tittles ============================ */
+h2{
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--blue-dark);
+
+    font-weight: normal;
+}
+
+/* Header ============================ */
+header{
+    background: #2d4a22;
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+#logo{
+    color: #FFF;
+    font-weight: 100;
+}
+
+/* Balance ============================ */
+#balance{
+    margin-top: -8rem;
+}
+#balance h2{
+    color: white;
+    margin-top: 0;
+}
+/* Cards ============================ */
+.card{
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    color: var(--blue-dark);
+
+    margin-bottom: 2rem;
+}
+.card h3{
+    font-weight: normal;
+    font-size: 1rem;
+}
+.card p{
+    font-size: 2rem;
+    line-height: 2rem;
+
+    margin-top: 1rem;
+}
+.card.total{
+    background-color: #49aa26;
+    color: white;
+}
+
+
+/* footer ============================ */
+footer{
+    text-align: center;
+}
