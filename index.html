@@ -28,8 +28,7 @@
                 </h3>
                 <p>R$ 5.000,00</p>
             </div>
-        </section>
-        <section>
+
             <div class="card">
                 <h3>
                     <spam>Saídas</spam>
@@ -37,8 +36,6 @@
                 </h3>
                 <p>R$ 2.000,00</p>
             </div>
-        </section>
-        <section>
             <div class="card total">
                 <h3>
                     <spam>Total</spam>
@@ -84,6 +81,33 @@
             </table>
         </section>
     </main>
+    <div class="modal-overlay active">
+        <div class="modal">
+            <div id="form">
+                <h2>Nova Transação</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class="sr-only" for="description">Descrição</label>
+                        <input type="text" id="description" name="description" placeholder="Descrição">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="description">Valor</label>
+                        <input type="Number" id="amount" name="amount" step="0.01" placeholder="0,00">
+                        <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" for="description">Data</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="input-group actions">
+                        <a href="#" class="button cancel">Cancelar</a>
+                        <button>Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <footer>
         <h4>dev.finança$</h2>
     </footer>

@@ -1,5 +1,7 @@
 :root{
     --blue-dark: #363f5f;
+    --green: #49aa26;
+    --ligth-green: #45fc02; 
 }
 *{
     margin: 0;
@@ -19,15 +21,44 @@ body{
 }
 /* Links e Buttons ============================ */
 a{
-    color: #49aa26;
+    color: var(--green);
     text-decoration: none;
 }
 a:hover{
-    color: #45fc02;
+    color: var(--ligth-green);
 }
 .button.new{
     display: inline-block;
     margin-bottom: 0.8rem;
+}
+button{
+    background: var(--green);
+    width: 48%;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+}
+button:hover{
+    background-color: var(--ligth-green);
+}
+a.button.cancel{
+    color: #e92929;
+    width: 48%;
+    height: 50px;
+    border: 2px solid #e92929;
+    border-radius: 0.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90%;
+
+    opacity: 0.8;
+}
+a.button.cancel:hover{
+    opacity: 1;
 }
 
 /* Tittles ============================ */
@@ -94,10 +125,14 @@ header{
 }
 
 /* table ============================ */
+#transaction{
+    display: block;
+    overflow-x: auto;
+}
 #data-table{
     width: 100%;
     border-spacing: 0 0.5rem;
-    color: #969cb3;
+    color: #969cb3;    
 }
 table thead tr th:first-child,
 table tbody tr td:first-child{
@@ -135,10 +170,74 @@ td.income{
 td.expense{
     color: #e92929;
 }
+/* Modal Label ============================ */
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.685);
+    width: 100%;
+    height: 100%;
+
+    position:fixed;
+    top: 0;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+.modal{
+    background-color: #f0f2f5;
+    padding: 2.4rem;
+}
+
+/* form ============================ */
+#form h2{
+    margin-top: 0;
+}
+input{
+    width: 100%;
+    border: none;
+    padding: 0.8rem;
+
+    border-radius: 0.25rem;
+}
+
+.input-group{
+    margin-bottom: 0.8rem;
+}
+.input-group small{
+    opacity: 0.5;
+}
+.input-group.actions{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* footer ============================ */
 footer{
     text-align: center;
     padding: 4rem 0 2rem;
     color: var(--blue-dark);
     opacity: 0.6;
+}
+
+/* Responsividade ============================ */
+@media(min-width: 800px){
+html{
+    font-size: 87.5%;
+}
+#balance{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+}
 }
